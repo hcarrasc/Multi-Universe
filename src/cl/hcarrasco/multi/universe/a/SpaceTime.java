@@ -2,11 +2,11 @@ package cl.hcarrasco.multi.universe.a;
 
 public class SpaceTime implements Runnable {
 	
-	private boolean endOfTimes = false;
+	private boolean endOfTimes = false; // true stopped the time thread.
 	private double time  = 0; // time, expressed in years
-	private double x     = 0; // width, expressed in KM
-	private double y     = 0; // height, expressed in KM
-	private double z     = 0; // depth, expressed in KM
+	private double width = 0; // width, expressed in KM
+	private double height= 0; // height, expressed in KM
+	private double depth = 0; // depth, expressed in KM
 	
 	private double darkEnergyFactor = 0.001; // factor to represents expansion caused by dark energy
 
@@ -16,9 +16,9 @@ public class SpaceTime implements Runnable {
 		while(!endOfTimes) {
 			
 			time  = time  + 0.5;
-			x = x + darkEnergyFactor;
-			y = y + darkEnergyFactor;
-			z = z + darkEnergyFactor;
+			width = width + darkEnergyFactor;
+			height = height + darkEnergyFactor;
+			depth = depth + darkEnergyFactor;
 			
 			darkEnergyFactor = darkEnergyFactor + 0.001;
 
@@ -45,27 +45,27 @@ public class SpaceTime implements Runnable {
 	public void setTime(double time) {
 		this.time = time;
 	}
-	public double getX() {
-		return x;
+	public double getWidth() {
+		return width;
 	}
-	public void setX(double x) {
-		this.x = x;
+	public void setWidth(double width) {
+		this.width = width;
 	}
-	public double getY() {
-		return y;
+	public double getHeight() {
+		return height;
 	}
-	public void setY(double y) {
-		this.y = y;
+	public void setHeight(double height) {
+		this.height = height;
 	}
-	public double getZ() {
-		return z;
+	public double getDepth() {
+		return depth;
 	}
-	public void setZ(double z) {
-		this.z = z;
+	public void setDepth(double depth) {
+		this.depth = depth;
 	}
 	@Override
 	public String toString() {
-		return "time: "+this.time+" space: ["+this.x+"-"+this.y+"-"+this.z+"]";
+		return "time: "+this.time+" space: ["+this.width+"-"+this.height+"-"+this.depth+"]";
 	}
 
 }

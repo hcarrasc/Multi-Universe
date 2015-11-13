@@ -4,10 +4,17 @@ import java.util.UUID;
 
 public class Particle {
 	
-	private String name;
-	private String structure;
+	private String name;       // or type of particle
+	private String structure;  // representation of how is composed this particle
 	private String uuid;
+	private Location location; // where is located this particle in space-time, for now will accept just one location. 
 	
+	public Location getLocation() {
+		return location;
+	}
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 	public Particle() {
 		setUUID();
 	}
