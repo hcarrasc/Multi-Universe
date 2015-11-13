@@ -12,12 +12,12 @@ public class Universe {
 		
 		totalParticlesOfUniverse = (Math.random() * 100 + 1);
 		materInUniverse = new ArrayList<Particle>();
+		startSpaceTime();
 		
 		for (int i=0; i<totalParticlesOfUniverse; i++){
 			materInUniverse.add(new Particle().setName("alpha_"+i).setStructure("10110"));
 		}
-        
-		startSpaceTime();
+
 		seeMater();
 	}
 	
