@@ -1,18 +1,25 @@
 package cl.hcarrasco.universes;
 
 import java.util.ArrayList;
+
+import org.apache.log4j.Logger;
+
 import cl.hcarrasco.universes.Particle;
 
 public class Universe {
 
+	final static Logger logger = Logger.getLogger(Universe.class);
+	
 	private double totalParticlesOfUniverse;
 	private ArrayList<Particle> materInUniverse;
 	private SpaceTime spaceTime;
 	
 	public void bigBang(){
 		
-		totalParticlesOfUniverse = (Math.random() * 100 + 1);
+		totalParticlesOfUniverse = Math.round((Math.random() * 100 + 1));
 		materInUniverse = new ArrayList<Particle>();
+		logger.info("Started with "+totalParticlesOfUniverse+" particles around this universe");
+
 		startSpaceTime();
 		
 		for (int i=0; i<totalParticlesOfUniverse; i++){
@@ -29,8 +36,7 @@ public class Universe {
 	
 	private void seeMater(){
 		for(Particle p : materInUniverse){
-			System.out.println("---------");
-			System.out.println(p.toString());
+			logger.info("Mater: "+p.toString());
 		}
 	}
 	

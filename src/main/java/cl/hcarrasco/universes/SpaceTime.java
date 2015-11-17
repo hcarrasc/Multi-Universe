@@ -1,6 +1,10 @@
 package cl.hcarrasco.universes;
 
+import org.apache.log4j.Logger;
+
 public class SpaceTime implements Runnable {
+	
+	final static Logger logger = Logger.getLogger(SpaceTime.class);
 	
 	private boolean endOfTimes = false; // true stopped the time thread.
 	private double time  = 0; // time, expressed in years
@@ -19,8 +23,8 @@ public class SpaceTime implements Runnable {
 			width = width + darkEnergyFactor;
 			height = height + darkEnergyFactor;
 			depth = depth + darkEnergyFactor;
-			darkEnergyFactor = darkEnergyFactor + 0.001;
-			System.out.println(this.toString());
+			darkEnergyFactor = darkEnergyFactor + 0.001f;
+			logger.info(this.toString());
 			
 			// this Thread.sleep allows just see this instance of time, is not part of this universe.
 			try {
@@ -62,7 +66,7 @@ public class SpaceTime implements Runnable {
 	}
 	@Override
 	public String toString() {
-		return "time: "+this.time+" space: ["+this.width+"-"+this.height+"-"+this.depth+"]";
+		return "time: "+this.time+" space: [x="+String.format("%.3f", this.width)+", y="+String.format("%.3f", this.height)+", z="+String.format("%.3f", this.depth)+"]";
 	}
 
 }

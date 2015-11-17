@@ -8,7 +8,6 @@ public class Location {
 	
 	@Override
 	public String toString() {
-		return "["+x+","+y+","+z+"]";
+		return "[x="+String.format("%.3f", x)+", y="+String.format("%.3f", y)+", z="+String.format("%.3f", z)+"]";
 	}
-	
 }
