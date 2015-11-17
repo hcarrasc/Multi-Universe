@@ -1,4 +1,4 @@
-package cl.hcarrasco.multi.universe.a;
+package cl.hcarrasco.universes;
 
 public class SpaceTime implements Runnable {
 	
@@ -10,7 +10,7 @@ public class SpaceTime implements Runnable {
 	
 	private double darkEnergyFactor = 0.001; // factor to represents expansion caused by dark energy
 
-	@Override
+	//@Override 
 	public void run() {
 		
 		while(!endOfTimes) {
@@ -19,9 +19,7 @@ public class SpaceTime implements Runnable {
 			width = width + darkEnergyFactor;
 			height = height + darkEnergyFactor;
 			depth = depth + darkEnergyFactor;
-			
 			darkEnergyFactor = darkEnergyFactor + 0.001;
-
 			System.out.println(this.toString());
 			
 			// this Thread.sleep allows just see this instance of time, is not part of this universe.
@@ -30,7 +28,6 @@ public class SpaceTime implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			
 		}
 	}
 	public boolean isEndOfTimes() {

@@ -1,4 +1,4 @@
-package cl.hcarrasco.multi.universe.a;
+package cl.hcarrasco.universes;
 
 public class God {
 	public static void main(String[] args) {

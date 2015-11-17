@@ -1,6 +1,7 @@
-package cl.hcarrasco.multi.universe.a;
+package cl.hcarrasco.universes;
 
 import java.util.ArrayList;
+import cl.hcarrasco.universes.Particle;
 
 public class Universe {
 
@@ -15,9 +16,14 @@ public class Universe {
 		startSpaceTime();
 		
 		for (int i=0; i<totalParticlesOfUniverse; i++){
-			materInUniverse.add(new Particle().setName("alpha_"+i).setStructure("10110"));
+			
+			Location location = new Location();
+			location.x = Math.random() * spaceTime.getWidth() + 0;
+			location.y = Math.random() * spaceTime.getHeight()+ 0;
+			location.z = Math.random() * spaceTime.getDepth() + 0;
+			materInUniverse.add(new Particle().setName("alpha_"+i).setStructure("10110").setLocation(location));
+			
 		}
-
 		seeMater();
 	}
 	

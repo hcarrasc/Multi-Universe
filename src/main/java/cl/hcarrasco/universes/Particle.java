@@ -1,4 +1,4 @@
-package cl.hcarrasco.multi.universe.a;
+package cl.hcarrasco.universes;
 
 import java.util.UUID;
 
@@ -12,8 +12,9 @@ public class Particle {
 	public Location getLocation() {
 		return location;
 	}
-	public void setLocation(Location location) {
+	public Particle setLocation(Location location) {
 		this.location = location;
+		return this;
 	}
 	public Particle() {
 		setUUID();
@@ -42,6 +43,6 @@ public class Particle {
 	
 	@Override
 	public String toString() {
-		return "name: "+ this.getName()+" structure: "+this.getStructure()+" uid: "+this.getUUID();
+		return "name: "+ this.getName()+" structure: "+this.getStructure()+" location: "+this.location.toString();
 	}
 }
