@@ -1,4 +1,4 @@
-## Multi-Universe
+# Multi-Universe
 
 This repository is a simulation just for fun of a small universe. 
 It includes an Universe object, with space-time object running in
@@ -6,6 +6,6 @@ It includes an Universe object, with space-time object running in
 increases with a small (dummy) factor to represent the expansion by  dark
  energy) and a random number of particles created in a bigbang method.
 
-# To do:
+### To do:
 
 Simulate gravity force to particles in the universe.
