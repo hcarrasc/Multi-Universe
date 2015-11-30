@@ -8,4 +8,4 @@ increases with a small (dummy) factor to represent the expansion by  dark
 
 ### To do:
 
-Simulate gravity force to particles in the universe.
+Simulate gravity force and apply it to particles in the universe.
